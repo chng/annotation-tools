@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+       <context:component-scan base-package="eventcenter"/>
+       <context:component-scan base-package="eventcenter.handler"/>
+
+       <bean id="msgReolverList" class="notifyresolvers.MsgResolverList">
+              <property name="resolvers">
+                     <list>
+                            <ref bean="notifyResolver"></ref>
+                            <ref bean="stompQResolver"></ref>
+                            <ref bean="amQResolver"></ref>
+                     </list>
+              </property>
+       </bean>
+       <bean id="stompQResolver" class="notifyresolvers.StompQResolver"/>
+       <bean id="notifyResolver" class="notifyresolvers.NotifyResolver"/>
+       <bean id="amQResolver"  class="notifyresolvers.AmQResolver"/>
+</beans>

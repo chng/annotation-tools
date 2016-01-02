@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/auto-interface/auto-interface.iml" filepath="$PROJECT_DIR$/auto-interface/auto-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto-interface-test/auto-interface-test.iml" filepath="$PROJECT_DIR$/auto-interface-test/auto-interface-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventCenter/eventCenter.iml" filepath="$PROJECT_DIR$/eventCenter/eventCenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main-test.iml" filepath="$PROJECT_DIR$/main-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sleep-task/sleep-task.iml" filepath="$PROJECT_DIR$/sleep-task/sleep-task.iml" />
+    </modules>
+  </component>
+</project>

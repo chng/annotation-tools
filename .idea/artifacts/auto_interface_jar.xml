@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="auto-interface:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/auto_interface_jar</output-path>
+    <root id="archive" name="auto-interface.jar">
+      <element id="module-output" name="auto-interface" />
+    </root>
+  </artifact>
+</component>
