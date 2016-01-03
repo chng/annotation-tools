@@ -1,6 +1,4 @@
-package me;
-
-import me.generator.GenerateInterface;
+package me.generator;
 
 /**
  * Created by OurEDA on 2016/1/2.
@@ -8,7 +6,7 @@ import me.generator.GenerateInterface;
 public class Test {
 
     @GenerateInterface
-    public int method(int i, int j) {
+    public int method2(int i, int j) {
         return 1;
     }
 }

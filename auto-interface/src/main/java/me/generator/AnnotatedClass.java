@@ -3,7 +3,6 @@ package me.generator;
 import javax.annotation.processing.Filer;
 import javax.lang.model.element.Modifier;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
@@ -37,23 +36,22 @@ public class AnnotatedClass {
         // 接口名：I+ClassName
         // 使用Javapoet生成代码。先定义构造器
         TypeSpec.Builder interfaceBuilder = TypeSpec.interfaceBuilder("I" + className)
-                .addModifiers(Modifier.PUBLIC);
+                .addModifiers(Modifier.PUBLIC); // 接口是public
 
         // 对这个被注解的类的每个被注解的方法，将方法的名字、返回值、参数列表，都加到构造器中
         for (AnnotatedMethod method : methods) {
-            //方法名，public，返回值类型
+            //方法名，参数列表，返回值类型
             final String methodName = method.getMethodName();
             final TypeMirror returnType = method.getReturnType();
             final List<? extends VariableElement> parameters = method.getParameters();
 
-            MethodSpec.Builder methodBuilder =
-                    MethodSpec.methodBuilder(methodName)
-                            .addModifiers(Modifier.ABSTRACT, Modifier.PUBLIC)
-                            .returns(TypeName.get(returnType));
+            MethodSpec.Builder methodBuilder = MethodSpec.methodBuilder(methodName) // 方法名
+                            .addModifiers(Modifier.ABSTRACT, Modifier.PRIVATE) // 修饰符：抽象方法、public
+                            .returns(TypeName.get(returnType)); // 返回值类型
 
             //参数列表
             for (VariableElement e : parameters) {
-                methodBuilder.addParameter(TypeName.get(e.asType()), "");
+                methodBuilder.addParameter(TypeName.get(e.asType()), e.getSimpleName().toString());
             }
             interfaceBuilder.addMethod(methodBuilder.build());
         }

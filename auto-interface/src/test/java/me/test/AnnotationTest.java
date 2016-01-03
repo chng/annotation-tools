@@ -1,10 +1,12 @@
+package me.test;
+
 import me.generator.GenerateInterface;
 import org.junit.Test;
 
 /**
  * Created by OurEDA on 2016/1/1.
  */
-public class TestInterfaceGenerator {
+public class AnnotationTest {
 
     @GenerateInterface
     public void method1() {
@@ -18,6 +20,5 @@ public class TestInterfaceGenerator {
 
     @Test
     public void test() {
-        TestInterfaceGenerator t = new TestInterfaceGenerator();
     }
 }

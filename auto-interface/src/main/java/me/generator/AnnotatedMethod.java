@@ -24,7 +24,7 @@ public class AnnotatedMethod {
         methodName = annotatedMethodElement.getSimpleName().toString();
         //获取类名
         TypeElement parent = (TypeElement) annotatedMethodElement.getEnclosingElement();
-        className = parent.getQualifiedName().toString();
+        className = parent.getSimpleName().toString();
         //获取返回值类型
         returnType = annotatedMethodElement.getReturnType();
         parameters = annotatedMethodElement.getParameters();

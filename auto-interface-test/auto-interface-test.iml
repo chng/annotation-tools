@@ -14,7 +14,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="auto-interface" />
+    <orderEntry type="module" module-name="auto-interface" exported="" />
     <orderEntry type="library" name="Maven: com.squareup:javapoet:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.collections:google-collections:1.0-rc2" level="project" />
   </component>
